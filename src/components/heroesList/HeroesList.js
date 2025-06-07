@@ -28,7 +28,7 @@ const HeroesList = () => {
     useEffect(() => {
         const newHeroes = heroes.filter((item) => item.id !== activID);
         dispatch(heroesFetched(newHeroes));
-        if (activID !== 0) {
+        if (activID !== '') {
             request(`http://localhost:3001/heroes/${activID}`, 'DELETE')
         }
     }, [activID])

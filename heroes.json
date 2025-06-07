@@ -5,6 +5,36 @@
       "name": "Первый герой",
       "description": "Первый герой в рейтинге!",
       "element": "fire"
+    },
+    {
+      "id": "421b5a60-8464-40dd-8362-8f48b3d45efb",
+      "name": "Миша",
+      "description": "Миша любит мед",
+      "element": "wind"
+    },
+    {
+      "id": "f27f4d7f-eca4-44bd-a09e-e166cc523c34",
+      "name": "Ксения",
+      "description": "Самый лучший пузырик в мире",
+      "element": "earth"
+    },
+    {
+      "id": "ab822683-ed63-4db5-bdac-abc5ccb245a8",
+      "name": "Юлия",
+      "description": "Мягкая снаружи, крепкая внутри",
+      "element": "fire"
+    },
+    {
+      "id": "f3550c83-ca52-4e90-b70e-81eb49c931d8",
+      "name": "Васька",
+      "description": "Руки из нужного места",
+      "element": "earth"
+    },
+    {
+      "id": "7de0277e-0231-45ea-8da8-db6143f5aca1",
+      "name": "Екатерина",
+      "description": "оиоррпол",
+      "element": "wind"
     }
   ],
   "filters": [
