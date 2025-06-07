@@ -38,10 +38,25 @@
     }
   ],
   "filters": [
-    "all",
-    "fire",
-    "water",
-    "wind",
-    "earth"
+    {
+      "filter": "all", 
+      "label": "Все"
+    },
+    {
+      "filter": "fire", 
+      "label": "Огонь"
+    },
+    {
+      "filter": "water", 
+      "label": "Вода"
+    },
+    {
+      "filter": "wind", 
+      "label": "Ветер"
+    },
+    {
+      "filter": "earth", 
+      "label": "Земля"
+    }
   ]
 }
