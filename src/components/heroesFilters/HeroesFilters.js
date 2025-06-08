@@ -31,7 +31,10 @@ const HeroesFilters = () => {
             <div className="card-body">
                 <p className="card-text">Отфильтруйте героев по элементам</p>
                 <div className="btn-group">
-                    <ViewBTN filters={filters} onActiveFilter={(filter) => onActiveFilter(filter)}/>
+                    <ViewBTN 
+                        filters={filters} 
+                        onActiveFilter={(filter) => onActiveFilter(filter)} 
+                    />
                 </div>
             </div>
         </div>
@@ -39,34 +42,38 @@ const HeroesFilters = () => {
 }
 
 const ViewBTN = ({filters, onActiveFilter}) => {
+    const {activFilter} = useSelector(state => state);
+
     const elements = filters.map(item => {
         let btnClassName;
 
         switch (item.filter) {
             case 'all':
-                btnClassName = "btn btn-outline-dark";
+                btnClassName = `btn btn-outline-dark`;
                 break;
             case 'fire':
-                btnClassName = 'btn btn-danger';
+                btnClassName = `btn btn-danger`;
                 break;
             case 'water':
-                btnClassName = 'btn btn-primary';
+                btnClassName = `btn btn-primary`;
                 break;
             case 'wind':
-                btnClassName = 'btn btn-success';
+                btnClassName = `btn btn-success`;
                 break;
             case 'earth':
-                btnClassName = 'btn btn-secondary';
+                btnClassName = `btn btn-secondary`;
                 break;
             default:
-                btnClassName = "btn btn-outline-dark";
+                btnClassName = `btn btn-outline-dark`;
                 break;
         }
+
+        const active = item.filter === activFilter ? 'active' : '';
 
         return (
             <Fragment key={item.filter}>
                 <button 
-                    className={btnClassName}
+                    className={`${btnClassName} ${active}`}
                     onClick={() => onActiveFilter(item.filter)}
                     >
                         {item.label}

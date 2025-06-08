@@ -52,7 +52,7 @@ const HeroesList = () => {
 
     let elements;
 
-    if (activFilter === '' || activFilter === 'all') {
+    if (activFilter === 'all') {
         elements = renderHeroesList(heroes);
     } else {
         const filterHeroes = heroes.filter(item => item.element === activFilter);
