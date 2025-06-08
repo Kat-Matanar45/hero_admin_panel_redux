@@ -42,51 +42,56 @@ const HeroesAddForm = () => {
     };
 
     return (
-        <form className="border p-4 shadow-lg rounded" onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-3">
-                <label htmlFor="name" className="form-label fs-4">Имя нового героя</label>
-                <input 
-                    className="form-control"
-                    type="text"
-                    placeholder="Как меня зовут?"
-                    {...register("name", { required: true })}
-                />  
-            </div>
+        <form 
+            className="border p-4 shadow-lg rounded" 
+            autoComplete="off" 
+            onSubmit={handleSubmit(onSubmit)}>
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label fs-4">Имя нового героя</label>
+                    <input 
+                        className="form-control"
+                        type="text"
+                        id='name'
+                        placeholder="Как меня зовут?"
+                        {...register("name", { required: true })}
+                    />  
+                </div>
 
-            <div className="mb-3">
-                <label htmlFor="text" className="form-label fs-4">Описание</label>
-                <textarea 
-                    className="form-control"
-                    type="text" 
-                    placeholder="Что я умею?"
-                    style={{"height": '130px'}}
-                    {...register("text", { required: true })}
-                />
-            </div>
-
-            <div className="mb-3">
-                <label htmlFor="element" className="form-label">Выбрать элемент героя</label>
-                <Controller 
-                    label="element"
-                    name="element"
-                    control={control}
-                    defaultValue={null}
-                    render={({ field }) => (
-                    <Select
-                        required
-                        {...field}
-                        placeholder="Я владею элементом..."
-                        options={[
-                            { value: "fire", label: "Огонь" },
-                            { value: "water", label: "Вода" },
-                            { value: "wind", label: "Ветер" },
-                            { value: "earth", label: "Земля" },
-                        ]}
+                <div className="mb-3">
+                    <label htmlFor="text" className="form-label fs-4">Описание</label>
+                    <textarea 
+                        className="form-control"
+                        id='text'
+                        type="text" 
+                        placeholder="Что я умею?"
+                        style={{"height": '130px'}}
+                        {...register("text", { required: true })}
                     />
-                    )}
-                />
-            </div>
-            <button type="submit" className="btn btn-primary">Создать</button>
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="element" className="form-label">Выбрать элемент героя</label>
+                    <Controller 
+                        label="element"
+                        name="element"
+                        control={control}
+                        defaultValue={null}
+                        render={({ field }) => (
+                        <Select
+                            required
+                            {...field}
+                            placeholder="Я владею элементом..."
+                            options={[
+                                { value: "fire", label: "Огонь" },
+                                { value: "water", label: "Вода" },
+                                { value: "wind", label: "Ветер" },
+                                { value: "earth", label: "Земля" },
+                            ]}
+                        />
+                        )}
+                    />
+                </div>
+                <button type="submit" className="btn btn-primary">Создать</button>
         </form>
     )
 }

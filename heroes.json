@@ -25,37 +25,31 @@
       "element": "fire"
     },
     {
-      "id": "f3550c83-ca52-4e90-b70e-81eb49c931d8",
-      "name": "Васька",
-      "description": "Руки из нужного места",
-      "element": "earth"
-    },
-    {
-      "id": "7de0277e-0231-45ea-8da8-db6143f5aca1",
-      "name": "Екатерина",
-      "description": "оиоррпол",
-      "element": "wind"
+      "id": "e8da8342-173e-42b5-9ca4-380f64119d3e",
+      "name": "Пупсик",
+      "description": "Ля ля ля",
+      "element": "water"
     }
   ],
   "filters": [
     {
-      "filter": "all", 
+      "filter": "all",
       "label": "Все"
     },
     {
-      "filter": "fire", 
+      "filter": "fire",
       "label": "Огонь"
     },
     {
-      "filter": "water", 
+      "filter": "water",
       "label": "Вода"
     },
     {
-      "filter": "wind", 
+      "filter": "wind",
       "label": "Ветер"
     },
     {
-      "filter": "earth", 
+      "filter": "earth",
       "label": "Земля"
     }
   ]

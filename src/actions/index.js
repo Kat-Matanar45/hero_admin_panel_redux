@@ -17,7 +17,24 @@ export const heroesFetchingError = () => {
     }
 }
 
-export const setActiveHero = (id) => ({
-    type: 'SET_ACTIVE_ID',
-    payload: id
-});
+export const setActiveHero = (id) => {
+    return {
+        type: 'SET_ACTIVE_ID',
+        payload: id
+    }
+};
+
+export const filtersFetched = (filters) => {
+    return {
+        type: 'FILTERS_FETCHED',
+        payload: filters
+    }
+};
+
+export const filterFetched = (filter) => {
+    return {
+        type: 'SET_ACTIVE_FILTER',
+        payload: filter
+    }
+};
+
