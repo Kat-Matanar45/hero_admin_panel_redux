@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import { setActiveHero } from "../../actions";
+import { setActiveHero } from "../../reducers/heroesSlice";
 
 const HeroesListItem = ({ name, id, description, element }) => {
 	const dispatch = useDispatch();

@@ -1,11 +1,13 @@
-// import { createStore } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import reducer from '../reducers';
 
-// const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import {reducer as reducerHer} from '../reducers/heroesSlice';
+import {reducer as reducerFil} from '../reducers/filtersSlice';
 
 const store = configureStore({
-    reducer: reducer,
+    reducer: {
+        heroes: reducerHer, 
+        filters: reducerFil
+    },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
     devTools: process.env.NODE_ENV !== 'production'
 }) 

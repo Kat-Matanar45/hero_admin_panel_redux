@@ -9,11 +9,11 @@
 import { Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { filtersFetched, filterFetched } from '../../actions';
+import { filtersFetched, filterFetched } from '../../reducers/filtersSlice';
 import { useHttp } from '../../hooks/http.hook';
 
 const HeroesFilters = () => {
-    const {filters} = useSelector(state => state);
+    const {filters} = useSelector(state => state.filters);
     const {request} = useHttp();
     const dispatch = useDispatch();
 

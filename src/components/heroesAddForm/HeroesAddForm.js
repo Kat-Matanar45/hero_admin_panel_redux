@@ -14,7 +14,7 @@ import Select from "react-select";
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 
-import { heroesFetching, heroesFetched } from '../../actions';
+import { heroesFetching, heroesFetched } from '../../reducers/heroesSlice';
 import { useHttp } from "../../hooks/http.hook";
 
 const HeroesAddForm = () => {
