@@ -48,6 +48,5 @@ export const {actions, reducer} = heroesSlice;
 export const {
     heroesFetching,
     heroesFetched,
-    heroesFetchingError,
     setActiveHero
 } = actions;

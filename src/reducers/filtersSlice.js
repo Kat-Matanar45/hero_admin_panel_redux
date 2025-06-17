@@ -38,6 +38,5 @@ const filtersSlice = createSlice({
 export const {actions, reducer} = filtersSlice;
 
 export const {
-    filtersFetched,
     filterFetched
 } = actions;
