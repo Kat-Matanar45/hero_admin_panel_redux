@@ -23,6 +23,12 @@
       "name": "Юлия",
       "description": "Мягкая снаружи, крепкая внутри",
       "element": "fire"
+    },
+    {
+      "id": "6f5a7ae8-1d99-437b-b3c7-745690d9aa1d",
+      "name": "Кристина",
+      "description": "Я не умею плавать... ",
+      "element": "water"
     }
   ],
   "filters": [

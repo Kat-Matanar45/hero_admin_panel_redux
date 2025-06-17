@@ -9,18 +9,23 @@
 import { Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { filtersFetched, filterFetched } from '../../reducers/filtersSlice';
-import { useHttp } from '../../hooks/http.hook';
+import Spinner from '../spinner/Spinner';
+
+import { fetchFilters, filterFetched } from '../../reducers/filtersSlice';
 
 const HeroesFilters = () => {
-    const {filters} = useSelector(state => state.filters);
-    const {request} = useHttp();
+    const {filters, filtersLoadingStatus} = useSelector(state => state.filters);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        request("http://localhost:3001/filters")
-            .then(data => dispatch(filtersFetched(data)))
+        dispatch(fetchFilters())
     }, [])
+
+    if (filtersLoadingStatus === "loading") {
+        return <Spinner/>;
+    } else if (filtersLoadingStatus === "error") {
+        return <h5 className="text-center mt-5">Ошибка загрузки</h5>
+    }
 
     const onActiveFilter = (filter) => {
         dispatch(filterFetched(filter))
