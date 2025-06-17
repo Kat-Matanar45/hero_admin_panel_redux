@@ -14,7 +14,7 @@ import Select from "react-select";
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 
-import { heroesFetching, heroesFetched } from '../../reducers/heroesSlice';
+import { fetchHeroes, heroesFetching } from '../../reducers/heroesSlice';
 import { useHttp } from "../../hooks/http.hook";
 
 const HeroesAddForm = () => {
@@ -35,8 +35,7 @@ const HeroesAddForm = () => {
 
         dispatch(heroesFetching());
         request("http://localhost:3001/heroes", "POST", JSON.stringify(newHero));
-        request("http://localhost:3001/heroes")
-            .then(data => dispatch(heroesFetched(data)))
+        dispatch(fetchHeroes());
 
         reset();
     };
